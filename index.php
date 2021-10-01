@@ -28,22 +28,34 @@
                 <label>Radius</label>
                 <input type="number" id="radius" value="40">
             </div>
+            <div>
+                <h2>Text:</h2>
+                <label>Text</label>
+                <input type="text" id="text" value="Hello World!">
+                <label>X</label>
+                <input type="number" id="tx" value="40">
+                <label>Y</label>
+                <input type="number" id="ty" value="40">
+                <label>Max Width</label>
+                <input type="number" id="maxWidth" value="">
+            </div>
             <button onclick="makeRectangle()">Draw rectangle</button>
             <button onclick="makeCircle()">Draw circle</button>
             <button onclick="makeCircle()">Draw table</button>
+            <button onclick="makeText()">Draw text</button>
             <button onclick="loadCanvas(1)">Load square</button>
             <button onclick="loadCanvas(2)">Load circle</button>
             <button onclick="saveCanvas(shape)">Save canvas</button>
             <button onclick="reset()">Reset</button>
         </div>
-        <canvas id="myCanvas" width="300" height="300"></canvas>
-        <svg width='200' height='200'>
-             <foreignObject width='100%' height='100%'>
-               <div>
-                  <table border='1'><tr><td>row 1, cell 1</td><td>row 1, cell 2</td></tr><tr><td>row 2, cell 1</td><td>row 2, cell 2</td></tr></table>
-               </div>
-             </foreignObject>
-           </svg>
+        <canvas id="myCanvas"></canvas>
+<!--        <svg width='200' height='200'>
+        <foreignObject width='100%' height='100%'>
+        <div>
+            <table border='1'><tr><td>row 1, cell 1</td><td>row 1, cell 2</td></tr><tr><td>row 2, cell 1</td><td>row 2, cell 2</td></tr></table>
+        </div>
+        </foreignObject>
+        </svg>-->
         <script src="testFunctions.js"></script>
         <div id="tableContainer">
             <div>
@@ -72,15 +84,14 @@
                 </table>
             </div>
             <div>
-                <h2>Circles</h2>
+                <h2>Text</h2>
                 <table id="tableText">
                     <tr>
                         <th>ID</th>
                         <th>Text</th>
                         <th>X</th>
                         <th>Y</th>
-                        <th>Radius</th>
-                        <th>Z-Index</th>
+                        <th>Max Width</th>
                     </tr>
                 </table>
             </div>

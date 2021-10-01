@@ -42,6 +42,22 @@ function makeCircle() {
     console.log("Drawing circle");
 }
 
+function makeText() {
+    newShape = {
+        id: id += 1,
+        text: $('#text'.val(), 10),
+        x: parseInt($('#tx').val(), 10),
+        y: parseInt($('#ty').val(), 10),
+        maxWidth: 1
+    };
+
+    shapes.push(newShape);
+    // Sort the Z-Index of shapes - the new shape needs zIndex = 1
+    sortIndex("adjust");
+    drawShape(newShape);
+    console.log("Drawing circle");
+}
+
 function drawShape(shape) {
     // decide if the shape is a rect or circle
     // (it's a rect if it has a width property)
@@ -166,7 +182,7 @@ $(canvas).on("mouseup", function (e) {
 
 function reDrawCanvas() {
     // Clear the canvas
-    ctx.clearRect(0, 0, 300, 300);
+    ctx.clearRect(0, 0, 300, 600);
     // redraw each shape in the shapes[] array
     for (var i = shapes.length - 1; i >= 0; i--) {
         drawShape(shapes[i]);
@@ -176,7 +192,7 @@ function reDrawCanvas() {
 
 function reset() {
     // Clear the canvas
-    ctx.clearRect(0, 0, 300, 300);
+    ctx.clearRect(0, 0, 300, 600);
     id = 0;
     shapes = [];
     updateList();
