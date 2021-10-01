@@ -1,0 +1,34 @@
+/* 
+    Created on : 6. aug. 2021, 08.19.04
+    Author     : rasmu
+*/
+
+canvas {
+    border: 1px solid black;
+}
+
+#tableContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#tableContainer div {
+    width: 100%;
+    margin: 25px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height: fit-content;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
